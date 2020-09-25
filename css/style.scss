@@ -1,0 +1,196 @@
+$VeryDarkBlue: hsl(230, 29%, 20%);
+$DarkGrayishBlue: hsl(230, 11%, 40%);
+$GrayishBlue: hsl(231, 7%, 65%);
+$LightGrayishBlue: hsl(207, 33%, 95%);
+
+$Red: hsl(0, 100%, 68%);
+
+body {
+  @import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
+  font-family: "Barlow", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-link ul {
+}
+.nav-link ul li {
+  display: inline;
+  padding: 15px;
+  list-style: none;
+}
+.login-li {
+  padding-right: 0;
+  margin-left: 30px;
+  list-style: upper-roman;
+  .btn-login {
+    color: $GrayishBlue;
+  }
+}
+
+.nav-link ul li a {
+  text-decoration: none;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: $VeryDarkBlue;
+}
+
+.hero {
+  padding: 100px 0;
+  position: relative;
+  .hero-flex {
+    display: flex;
+  }
+  .flex-content {
+    width: 50%;
+
+    .left-content {
+      .sub-heading {
+        letter-spacing: 5px;
+        color: $GrayishBlue;
+        .badge {
+          background-color: $VeryDarkBlue;
+          padding: 3px 8px;
+          color: $LightGrayishBlue;
+          border-radius: 12px;
+          font-weight: bold;
+          letter-spacing: 2px;
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .heading {
+      font-size: 64px;
+      font-weight: bold;
+      font-family: "Barlow Condensed", sans-serif;
+      padding: 20px 0;
+      color: $VeryDarkBlue;
+    }
+    .heading-text {
+      font-weight: regular;
+      letter-spacing: 1px;
+      width: 50%;
+      color: $DarkGrayishBlue;
+    }
+    .button-inline {
+      padding: 30px 0;
+    }
+    .btn-demo {
+      background-color: $Red;
+      color: $LightGrayishBlue;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 15px 30px;
+      border: none;
+      margin-right: 30px;
+    }
+    .button-layer {
+      letter-spacing: 5px;
+      color: $GrayishBlue;
+    }
+  }
+
+  .right-img {
+    width: 100%;
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+    }
+  }
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  height: 50%;
+  width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-link {
+    display: none;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    .nav-link ul li {
+      display: block;
+      text-align: center;
+    }
+
+    .login-li {
+      padding-right: 0;
+      margin-left: 0;
+      border-top: 1px solid rgba($color: $GrayishBlue, $alpha: 0.3);
+    }
+  }
+
+  .active {
+    display: block;
+    width: 100%;
+  }
+
+  // responseive all flexbox
+  .hero {
+    padding: 30px 0;
+  }
+  .hero .hero-flex {
+    flex-direction: column-reverse;
+  }
+  .hero .flex-content {
+    width: 100%;
+    padding: 15px;
+  }
+  .hero .flex-content .left-content .sub-heading {
+    font-size: 11px;
+  }
+  .hero .flex-content .left-content .heading {
+    font-size: 36px;
+  }
+  .hero .flex-content .heading-text {
+    width: 80%;
+  }
+  .hero .flex-content .btn-demo {
+    padding: 10px 15px;
+    font-size: 11px;
+    margin-right: 15px;
+  }
+  .hero .flex-content .button-layer {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+  .hero .right-img {
+    min-height: 300px;
+  }
+  .hero .right-img img {
+    width: 95%;
+  }
+}
